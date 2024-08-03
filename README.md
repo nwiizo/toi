@@ -17,11 +17,19 @@ The name `toi` comes from the Japanese word "問い" (toi), which means "questio
 
 ## Installation
 
-### Prerequisites
+### Using go install
 
-- Go 1.22 or later
+You can install `toi` directly using Go:
+
+```bash
+go install github.com/nwiizo/toi@latest
+```
+
+Make sure your `$GOPATH/bin` is in your `PATH` to run the installed binary.
 
 ### Building from source
+
+If you prefer to build from source:
 
 1. Clone the repository:
    ```
@@ -85,4 +93,3 @@ command1 | toi [flags] | command2
    find . -type f | toi | xargs -I {} sh -c 'echo "Processing: {}"; wc -l {}'
    ```
    This finds all files in the current directory, confirms, then counts lines in each file.
-
