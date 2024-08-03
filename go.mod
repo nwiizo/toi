@@ -1,4 +1,4 @@
-module github.com/nwiiz/toi
+module github.com/nwiizo/toi
 
 go 1.22.5
 

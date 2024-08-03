@@ -1,10 +1,14 @@
-# This is an updated .goreleaser.yml file with version specified.
+# This is an updated .goreleaser.yml file with gomod support.
 version: 2
 
 before:
   hooks:
     # You may remove this if you don't use go modules.
     - go mod tidy
+
+gomod:
+  proxy: false
+
 builds:
   - env:
       - CGO_ENABLED=0
@@ -32,10 +36,13 @@ archives:
     format_overrides:
     - goos: windows
       format: zip
+
 checksum:
   name_template: 'checksums.txt'
+
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
+
 changelog:
   sort: asc
   filters:
