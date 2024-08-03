@@ -27,23 +27,37 @@ go install github.com/nwiizo/toi@latest
 
 Make sure your `$GOPATH/bin` is in your `PATH` to run the installed binary.
 
+### Downloading pre-built binaries
+
+You can download pre-built binaries for your platform from the [releases page](https://github.com/nwiizo/toi/releases).
+
+1. Download the appropriate binary for your operating system and architecture.
+2. Extract the archive:
+   ```bash
+   tar -xzvf toi_<version>_<os>_<arch>.tar.gz
+   ```
+3. Move the binary to a directory in your PATH:
+   ```bash
+   sudo mv toi /usr/local/bin/
+   ```
+
 ### Building from source
 
 If you prefer to build from source:
 
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/nwiizo/toi.git
    cd toi
    ```
 
 2. Build the binary:
-   ```
+   ```bash
    go build -o toi
    ```
 
 3. (Optional) Move the binary to a directory in your PATH:
-   ```
+   ```bash
    sudo mv toi /usr/local/bin/
    ```
 
